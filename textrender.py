@@ -2,8 +2,13 @@ from os import system, name
 
 def updatescreen(lines):
   system('cls' if name == 'nt' else 'clear')
+  d = ''
+  for i in range(66):
+      d = d + '█'
+  print(d)
   for i in lines:
-    print(i)
+    print(f'█{i}█')
+  print(d)
 
 class editablelist:
   def __init__(self, list):
